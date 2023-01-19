@@ -22,7 +22,7 @@ public class cowfrisbee {
         for(int i = 0; i<n; i++) h[i] =  new pair(scan.nextInt(), i);
         Arrays.sort(h, new comp());
         TreeSet<pair> set = new TreeSet<>();
-        int ans = 0;
+        long ans = 0;
         for(int i = 0; i<n; i++){
             pair p = new pair(h[i].y, h[i].x);
             set.add(p);
