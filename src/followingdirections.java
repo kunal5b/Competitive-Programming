@@ -1,8 +1,6 @@
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Scanner;
 
-public class FollowingDirections {
+public class followingdirections {
     static boolean[][] vis;
     static long dfs(int i, int j, long curcnt, int[][] mat, int n){
         if(i == n || j == n){
@@ -32,33 +30,7 @@ public class FollowingDirections {
         }
         int q = scan.nextInt();
         long cnt = 0;
-        vis = new boolean[n][n];
-        for(int i = 0; i<n; i++){
-            for(int j = 0; j<n; j++){
-                if(!vis[i][j]){
-                    cnt+=dfs(i, j, 0, mat, n);
-                }
-            }
-        }
-        System.out.println(cnt);
-        while(q-->0){
-            int x = scan.nextInt()-1, y = scan.nextInt()-1;
-            if(mat[x][y] == 0){
-                mat[x][y] = 1;
-            }
-            else{
-                mat[x][y] = 0;
-            }
-            cnt = 0;
-            vis = new boolean[n][n];
-            for(int i = 0; i<n; i++){
-                for(int j = 0; j<n; j++){
-                    if(!vis[i][j]){
-                        cnt+=dfs(i, j, 0, mat, n);
-                    }
-                }
-            }
-            System.out.println(cnt);
-        }
+        
+
     }
 }
